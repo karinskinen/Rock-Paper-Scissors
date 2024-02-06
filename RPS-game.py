@@ -25,9 +25,16 @@ scissors = '''
 ---.__(___)
 '''
 import random
+import sys
 print("Welcome to the game of Rock Paper Scissors (RPS)!")
 users_choice = input("What do you choose? Rock, paper or scissors? ").lower()
 alternatives = ["rock", "paper", "scissors"]
+#if users_choice not in alternatives:
+count = alternatives.count(users_choice)
+if count == 0:
+  print("You didn't write an expected value, you loose!")
+  sys.exit()
+
 index_uc = int(alternatives.index(users_choice))
 computers_choice = random.randint(0, 2)
 
@@ -37,6 +44,7 @@ elif index_uc == 1:
   print(paper)
 elif index_uc == 2:
   print(scissors)
+
   
 print("my choice is:")
 if computers_choice == 0:
