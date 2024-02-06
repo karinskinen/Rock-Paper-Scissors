@@ -47,7 +47,7 @@ elif computers_choice == 2:
   print(scissors)
 
 if index_uc == computers_choice:
-  print("It's a tie, lets try again!")
+  print("It's a draw. Lets try again?")
 elif index_uc == 0 and computers_choice == 1:
   #rock against paper
   print("You loose, I win!")
